@@ -211,7 +211,7 @@ header nav ul li a:hover {
   margin-bottom: 1.5rem;
 }
 
-.contact-form {
+#contact-form {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
@@ -221,15 +221,15 @@ header nav ul li a:hover {
   align-items: center;
 }
 
-.contact-form label {
+#contact-form label {
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.contact-form input,
-.contact-form textarea {
+#contact-form input,
+#contact-form textarea {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
@@ -239,15 +239,15 @@ header nav ul li a:hover {
   font-family: Arial, sans-serif;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+#contact-form input:focus,
+#contact-form textarea:focus {
   border-color: #007BFF;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 /* Compatibilidad para transiciones */
-.contact-form button {
+#contact-form button {
   background-color: #007BFF;
   color: #fff;
   border: none;
@@ -260,7 +260,7 @@ header nav ul li a:hover {
   transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+#contact-form button:hover {
   background-color: #0056b3;
 }
 
