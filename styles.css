@@ -1,0 +1,316 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Estilo del header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hide the menu by default on smaller screens */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
+
+/* Estilos para la sección About Me */
+#about-me {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+#about-me h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#about-me p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos para la sección Projects */
+#projects {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Compatibilidad para flexbox */
+#projects ul {
+  display: -webkit-flex; /* Prefijo para navegadores antiguos */
+  display: -ms-flexbox;  /* Prefijo para navegadores antiguos */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#projects ul li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 300px;
+  text-align: left;
+}
+
+#projects ul li a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#projects ul li a:hover {
+  text-decoration: underline;
+}
+
+#project-filters {
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.filter-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Estilos para la sección Skills */
+#skills {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#skills ul li {
+  position: relative;
+  font-size: 1.2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+#skills ul li::before {
+  content: '✔'; /* Puedes cambiar este ícono por otro */
+  font-size: 1.5rem;
+  color: #007BFF;
+}
+
+/* Compatibilidad para transformaciones */
+#skills ul li:hover {
+  -webkit-transform: scale(1.1); /* Prefijo para navegadores antiguos */
+  -moz-transform: scale(1.1);    /* Prefijo para navegadores antiguos */
+  transform: scale(1.1);
+  color: #007BFF;
+}
+
+/* Estilos para la sección Contact */
+#contact {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Compatibilidad para transiciones */
+.contact-form button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease; /* Prefijo para navegadores antiguos */
+  -moz-transition: background-color 0.3s ease;    /* Prefijo para navegadores antiguos */
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+section {
+  scroll-margin-top: 80px; /* Ajusta según la altura de tu header */
+}
+
+/* Lightbox Styles */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#lightbox.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: none; /* Ocultar por defecto */
+}
+
+input.error, textarea.error {
+  border-color: red;
+}

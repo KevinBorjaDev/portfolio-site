@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio website showcasing my projects, skills, and contact information.">
+  <title>Web Develop</title>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header>
+    <button id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about-me">
+    <h1>About Me</h1>
+    <p>Hello! I'm a web developer passionate about creating accessible and user-friendly websites.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here are some of my recent projects:</p>
+
+    <!-- Filter Buttons -->
+    <div id="project-filters">
+      <button data-category="all" class="filter-btn active">All</button>
+      <button data-category="web" class="filter-btn">Web Development</button>
+      <button data-category="design" class="filter-btn">Design</button>
+      <button data-category="other" class="filter-btn">Other</button>
+    </div>
+
+    <!-- Project List -->
+    <ul id="project-list">
+      <li data-category="web">
+        <img src="project1.jpg" alt="Project 1" class="project-img">
+        Project 1: <a href="#">Web Project Link</a>
+      </li>
+      <li data-category="design">
+        <img src="project2.jpg" alt="Project 2" class="project-img">
+        Project 2: <a href="#">Design Project Link</a>
+      </li>
+      <li data-category="web">
+        <img src="project3.jpg" alt="Project 3" class="project-img">
+        Project 3: <a href="#">Another Web Project Link</a>
+      </li>
+      <li data-category="other">
+        <img src="project4.jpg" alt="Project 4" class="project-img">
+        Project 4: <a href="#">Other Project Link</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Lightbox Container -->
+  <div id="lightbox" class="hidden">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Lightbox Image">
+  </div>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form id="contact-form" action="#" method="POST" novalidate>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required aria-required="true">
+      <span class="error-message" id="name-error"></span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required aria-required="true">
+      <span class="error-message" id="email-error"></span>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+      <span class="error-message" id="message-error"></span>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>
