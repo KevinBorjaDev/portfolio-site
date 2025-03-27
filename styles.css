@@ -215,6 +215,8 @@ header nav ul li a:hover {
   max-width: 600px;
   margin: 0 auto;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form label {
